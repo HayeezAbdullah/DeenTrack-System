@@ -1,6 +1,7 @@
 import { X } from "lucide-react";
 import { motion } from "framer-motion";
 import Cartitems from "./Cartitems";
+import Cartitemsheading from "./Cartitemsheading";
 
 const CartPopup = ({ isOpen, onClose }) => {
   const handleDelete = () => {
@@ -27,6 +28,7 @@ const CartPopup = ({ isOpen, onClose }) => {
               <X />
             </button>
             <h2 className="text-2xl font-semibold mb-4">Your Cart 🛒</h2>
+            <Cartitemsheading />
             <Cartitems
               type="Kotmale Fresh Milk"
               quantity={2}

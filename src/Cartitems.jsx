@@ -7,7 +7,7 @@ const Cartitems = ({ type, quantity, price, onDelete }) => {
   return (
     <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-white rounded-lg shadow-sm">
       {/* Product Name */}
-      <div className="text-lg font-semibold text-gray-800 w-1/4">{type}</div>
+      <div className="text-gray-700 w-1/4">{type}</div>
 
       {/* Quantity */}
       <div className="text-gray-700 w-1/6 text-center">{quantity}</div>
