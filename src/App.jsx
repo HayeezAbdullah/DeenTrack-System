@@ -1,9 +1,18 @@
+import { useState } from "react";
+import FloatingCartButton from "./FLoatingcartbutton";
 import Navbar from "./Navbar";
 import Productcard from "./Productcard";
 import SearchBar from "./Searchbar";
 import SingleCard from "./Singlecard";
+import CartPopup from "./CartPopup";
 
 const App = () => {
+  const [cartItems, setCartItems] = useState([]);
+  const [cartOpen, setCartOpen] = useState(false);
+
+  const addToCart = (product, price) => {
+    setCartItems([...cartItems, { product, price }]);
+  };
   return (
     <div className="min-h-screen bg-[#F7F7F7]">
       <Navbar />
@@ -47,6 +56,15 @@ const App = () => {
           />
         </div>
       </div>
+      <FloatingCartButton
+        onClick={() => setCartOpen(true)}
+        itemCount={cartItems.length}
+      />
+      <CartPopup
+        isOpen={cartOpen}
+        onClose={() => setCartOpen(false)}
+        cartItems={cartItems}
+      />
     </div>
   );
 };
