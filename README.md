@@ -15,8 +15,8 @@ Running a retail shop manually can be time-consuming and prone to mistakes. Deen
 
 ## Technology Stack  
 - **Frontend**: React (Vite), Tailwind CSS  
-- **Backend**: (To be added)  
-- **Database**: (To be added)  
+- **Backend**: NodeJS
+- **Database**: PostgreSQL  
 - **Version Control**: Git & GitHub  
 
 ---
