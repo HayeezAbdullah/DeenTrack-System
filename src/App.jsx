@@ -35,7 +35,7 @@ const App = () => {
         <h2 className="text-xl  text-center mb-6 text-gray-700">
           Deal of the Day
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
+        <div className="grid grid-cols-1 m-5 sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
           <Productcard
             product="Carrot (250g)"
             price="150"

@@ -18,7 +18,7 @@ const CartPopup = ({ isOpen, onClose }) => {
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
-            className="bg-[#F7F7F7] p-6 rounded-lg shadow-xl w-[400px] relative"
+            className="bg-[#EAFAEA] p-6 rounded-lg shadow-xl w-[400px] relative"
             onClick={(e) => e.stopPropagation()}
           >
             <button
