@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
+import { FiMenu, FiUser } from "react-icons/fi";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const Navbar = ({ triggerUsericon }) => {
   return (
     <nav className="text-grey-900 ">
       <div className="container mx-auto flex justify-between items-center">
@@ -32,39 +30,12 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? (
-            <FiX />
-          ) : (
-            <span className="text-4xl">
-              <FiMenu className="p-1 m-3" />
-            </span>
-          )}
+        <button className="md:hidden" onClick={triggerUsericon}>
+          <span className="text-4xl">
+            <FiUser className="p-1 m-3" />
+          </span>
         </button>
       </div>
-
-      {/* Mobile Full Screen Menu */}
-      {isOpen && (
-        <div className="md:hidden fixed inset-0 bg-purple-800 bg-opacity-95 flex flex-col items-center justify-center space-y-6 z-50">
-          <button onClick={() => setIsOpen(false)} className="text-3xl">
-            <span className="text-4xl">
-              <FiX />
-            </span>
-          </button>
-          <a href="#" className="text-2xl hover:text-gray-300 transition">
-            Home
-          </a>
-          <a href="#" className="text-2xl hover:text-gray-300 transition">
-            About
-          </a>
-          <a href="#" className="text-2xl hover:text-gray-300 transition">
-            Services
-          </a>
-          <a href="#" className="text-2xl hover:text-gray-300 transition">
-            Contact
-          </a>
-        </div>
-      )}
     </nav>
   );
 };

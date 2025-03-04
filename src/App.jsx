@@ -5,17 +5,23 @@ import Productcard from "./Productcard";
 import SearchBar from "./Searchbar";
 import SingleCard from "./Singlecard";
 import CartPopup from "./CartPopup";
+import Loginpopup from "./Loginpopup";
 
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
   const [cartOpen, setCartOpen] = useState(false);
+  const [loginPopup, setLoginPopup] = useState(false);
 
   const addToCart = (product, price) => {
     setCartItems([...cartItems, { product, price }]);
   };
   return (
     <div className="min-h-screen bg-[#F7F7F7]">
-      <Navbar />
+      <Navbar
+        triggerUsericon={() => {
+          setLoginPopup(true);
+        }}
+      />
       <SearchBar />
 
       <div className="hidden md:grid md:grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 p-4">
@@ -65,6 +71,13 @@ const App = () => {
         onClose={() => setCartOpen(false)}
         cartItems={cartItems}
       />
+      {loginPopup && (
+        <Loginpopup
+          triggerX={() => {
+            setLoginPopup(false);
+          }}
+        />
+      )}
     </div>
   );
 };
