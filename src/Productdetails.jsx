@@ -8,29 +8,11 @@ function ProductDetails() {
     {
       id: 101,
       name: "Deen's Ceylon Tea",
-      image: "/images/deens-ceylon-tea.jpg", // Example path
+      image: "/deenceylontea.png", // Example path
       packaging: "200g Loose Leaf",
       expiry: "Best before: Dec 2025",
       description:
         "Experience the pure essence of Ceylon with Deen’s Ceylon Tea, a carefully selected blend of the finest tea leaves, handpicked from the lush green hills of Sri Lanka. Our tea is 100% natural, free from artificial additives, and crafted to deliver an unmatched aroma and rich, full-bodied flavor in every sip. Sold exclusively through Deen Stores, located in Negombo, we take pride in offering only the highest quality tea, ensuring freshness and authenticity in every pack. Whether you enjoy it as a refreshing morning cup or a soothing evening brew, this premium tea is a testament to tradition, purity, and excellence. With every sip, you’re experiencing the true taste of Ceylon—crafted with care, packaged with trust, and delivered with a promise of quality.",
-    },
-    {
-      id: 102,
-      name: "Black Tea",
-      image: "/images/black-tea.jpg",
-      packaging: "100 Tea Bags",
-      expiry: "Best before: Oct 2024",
-      description:
-        "A strong and robust black tea, perfect for your morning boost.",
-    },
-    {
-      id: 103,
-      name: "Herbal Tea",
-      image: "/images/herbal-tea.jpg",
-      packaging: "50g Herbal Infusion",
-      expiry: "Best before: Jan 2026",
-      description:
-        "A refreshing herbal blend with natural ingredients for a relaxing experience.",
     },
   ];
 
